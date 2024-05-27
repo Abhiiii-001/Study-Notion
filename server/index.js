@@ -19,8 +19,6 @@ const PORT = process.env.PORT || 4000;
 //database connect
 database.connect();
 //middlewares
-app.use(express.json());
-app.use(cookieParser());
 app.use(
 	cors({
 		origin:'*',
@@ -28,6 +26,8 @@ app.use(
 		credentials:true,
 	})
 )
+app.use(express.json());
+app.use(cookieParser());
 // res.header( "Access-Control-Allow-Origin" );
 app.use(function(req, res, next) {
 	  res.header('Access-Control-Allow-Origin', "*");
