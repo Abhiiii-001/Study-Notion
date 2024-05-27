@@ -21,7 +21,7 @@ database.connect();
 //middlewares
 app.use(
 	cors({
-		origin:'*',
+		origin:'https://ed-circle-pi.vercel.app',
 		methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 		credentials:true,
 	})
