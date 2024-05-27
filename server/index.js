@@ -27,8 +27,8 @@ app.use(
 	})
 )
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://ed-circle-pi.vercel.app');
-  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header.append('Access-Control-Allow-Origin', 'https://ed-circle-pi.vercel.app');
+  res.header.append('Access-Control-Allow-Credentials', 'true');
   next();
 });
 app.use(express.json());
