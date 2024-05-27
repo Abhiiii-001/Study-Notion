@@ -27,8 +27,8 @@ app.use(
 	})
 )
 app.use((req, res, next) => {
-  res.headers.append('Access-Control-Allow-Origin', '*');
-  res.headers.append('Access-Control-Allow-Credentials', 'true');
+  res.headers('Access-Control-Allow-Origin', '*');
+  res.headers('Access-Control-Allow-Credentials', 'true');
   next();
 });
 app.use(express.json());
