@@ -19,21 +19,23 @@ const PORT = process.env.PORT || 4000;
 //database connect
 database.connect();
 //middlewares
+app.use(express.json());
+app.use(cookieParser());
 app.use(
 	cors({
-		origin:'https://ed-circle-pi.vercel.app',
+		origin:["https://ed-circle-pi.vercel.app"],
 		methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 		credentials:true,
 	})
 )
-app.use((req, res, next) => {
-   res.header('Access-Control-Allow-Origin', 'https://ed-circle-pi.vercel.app');
-   res.header('Access-Control-Allow-Headers', true);
-   res.header('Access-Control-Allow-Credentials', true);
-   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-});
-app.use(express.json());
-app.use(cookieParser());
+// res.header( "Access-Control-Allow-Origin" );
+app.use(function(req, res, next) {
+	  res.header('Access-Control-Allow-Origin', "https://ed-circle-pi.vercel.app");
+	  res.header('Access-Control-Allow-Headers', true);
+	  res.header('Access-Control-Allow-Credentials', true);
+	  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  next();
+  });
 // res.header( "Access-Control-Allow-Origin" );
 
 app.use(
