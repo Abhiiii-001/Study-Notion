@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin:["*"],
+		origin:["http://localhost:3000"],
 		methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 		credentials:true,
 	})
