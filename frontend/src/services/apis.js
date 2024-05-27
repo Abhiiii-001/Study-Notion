@@ -1,4 +1,4 @@
-const BASE_URL = "https://ed-circle-api.vercel.app/api/v1"
+const BASE_URL = "http://ed-circle-api.vercel.app/api/v1"
 
 // AUTH ENDPOINTS
 export const endpoints = {
