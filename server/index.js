@@ -27,9 +27,10 @@ app.use(
 	})
 )
 app.use((req, res, next) => {
-  res.header.append('Access-Control-Allow-Origin', 'https://ed-circle-pi.vercel.app');
-  res.header.append('Access-Control-Allow-Credentials', 'true');
-  next();
+   res.header('Access-Control-Allow-Origin', 'https://ed-circle-pi.vercel.app');
+   res.header('Access-Control-Allow-Headers', true);
+   res.header('Access-Control-Allow-Credentials', true);
+   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 });
 app.use(express.json());
 app.use(cookieParser());
