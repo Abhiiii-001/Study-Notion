@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin:["https://ed-circle-pi.vercel.app"],
+		origin:["https://study-notion-learn.vercel.app"],
 		methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 		credentials:true,
 	})
